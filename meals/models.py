@@ -1,7 +1,5 @@
 from django.db import models
-
-from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 # from cloudinary.models import CloudinaryField
 
 
@@ -13,7 +11,6 @@ class Meals(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     preparation_time = models.IntegerField()
     image = models.ImageField(upload_to='meals/', default=True)
-
 
     class Meta:
         verbose_name = 'meal'
