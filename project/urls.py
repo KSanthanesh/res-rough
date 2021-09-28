@@ -22,8 +22,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('meals.urls'), name='meals-urls'),
-    # path('', views.get_meal_list, name='get_meal_list'),
-    # path('', views.get_meal_detail, name='get_meal_detail'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    
 ]
 
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

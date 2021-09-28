@@ -3,10 +3,17 @@
 {% block content%}
 
 
+<div class="row">
+    
+<img src="https://c8.alamy.com/zooms/9/9b627a21264e4285829936717f49dacf/2e6mgtr.jpg" alt="Dosa picture" width="800">
+
+
+</div>
+
 <h1>Meal list</h1>
 
 {% for meal in meal_list %}
-<h2><a href="{% url 'meals:meal_detail' meal.slug %}">{{ meal }}</a></h2>
+<h2><a href="{% url 'meals:meal_detail' meal.slug %}">{{ meal.name }}</a></h2>
 {% endfor %}
 
 {% endblock %}
