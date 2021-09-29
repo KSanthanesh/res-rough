@@ -6,7 +6,7 @@ from django.contrib import messages
 
 
 def home(request):
-    return render(request, 'list.html')
+    return render(request, 'meals/home.html')
 
 
 def get_meal_list(request):
@@ -16,11 +16,11 @@ def get_meal_list(request):
         'meal_list': meal_list,
     }
 
-    return render(request, 'list.html', context)
+    return render(request, 'meals/list.html', context)
 
 
 def get_meal_detail(request, slug):
-    meal_detail = Meals.objects.all()
+    meal_detail = Meals.objects.get(slug=slug)
 
     context = {
         'meal_detail': meal_detail,
@@ -29,10 +29,11 @@ def get_meal_detail(request, slug):
 
 # user Registration
 
+
 def register(request):
-    form=UserCreationForm
+    form = UserCreationForm
     if request.method == 'POST':
-        signup=UserCreationForm(request.POST)
+        signup = UserCreationForm(request.POST)
         if signup.is_valid():
             signup.save()
             messages.success(request, 'User has been successfully Registered.')

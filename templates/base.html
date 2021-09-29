@@ -5,8 +5,7 @@
 <head>
   <title>Dosa Palace</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700"
     rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
@@ -39,15 +38,16 @@
     <h1>
     <a href="{% url 'home'%}">Dosa Palace</a></h1>
   </div>
+  
   <nav class="nav navbar">
     
       
-      <ul class="nav navbar-nav navbar-expand-lg">
-        <li><a href="{% url 'home'%}">Home</a></li>
-        <li><a href="#">Meals</a></li>
-        <li><a href="#">Reservation</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <ul class="nav navbar-nav navbar-expand-lg">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'get_meal_list' %}">Meals</a></li>
+      <li><a href="#">Reservation</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
       <ul class="nav navbar-nav navbar-right navbar-expand-lg">
         {% if user.is_authenticated %}
         <li><a href="{% url 'logout' %}">Logout</a></li>
@@ -57,13 +57,14 @@
         {% endif %}
 
       </ul>
+    </nav>
     </div>
-  </nav> 
-
-  
+    <div class="row">
+      <img src="https://www.hotel7dublin.com/wp-content/uploads/Restaurant-Bar-5-1.jpg" class="img" alt="restaurant-image">
+  </div>
 	
 	<!-- Main Content -->
-	<div class="container">
+	<div class="container-fluid">
 
         {% block content %}
         {% endblock %}
@@ -73,41 +74,15 @@
 	<hr>
 	
 	<!-- Footer -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-10 mx-auto">
-					<ul class="list-inline text-center">
-						<li class="list-inline-item">
-							<a href="#">
-								<span class="fa-stack fa-lg">
-	                  
-	                  <i class="fab fa-twitter"></i>
-	                </span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="#">
-								<span class="fa-stack fa-lg">
-	                  
-	                  <i class="fab fa-facebook-f"></i>
-	                </span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="#">
-								<span class="fa-stack fa-lg">
-	                  
-	                  <i class="fab fa-github"></i>
-	                </span>
-							</a>
-						</li>
-					</ul>
-					<p class="copyright text-muted">Copyright &copy; Your Website <span id="copyright"></span></p>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<footer class="footer bg-success">
+    <div class="container text-center">
+      <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+      <a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+      <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
+      
+      
+    </div>
+  </footer>
 
   
 

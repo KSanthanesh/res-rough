@@ -10,12 +10,36 @@ html {
     font-weight: 300;
     color: #000;
   }
-
+  /* navbar   */
    ul, li, a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+  
   }
- 
+  /* image */
+ .img {
+   height: 70%;
+   width:100%;
+   
+ }
+ /*  Footer  */
+ .footer {
+  background: #061D25;
+  padding: 10px 0;
+}
+.footer a {
+  color: #000;
+  font-size: 40px;
+  padding: 20px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
+}
 
   
