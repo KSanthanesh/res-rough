@@ -10,7 +10,7 @@ class Meals(models.Model):
     people = models.IntegerField()
     price = models.DecimalField(max_digits=5, decimal_places=2)
     preparation_time = models.IntegerField()
-    image = models.ImageField(upload_to='meals/', default=True)
+    image = models.ImageField(upload_to='media/', default=True)
 
     class Meta:
         verbose_name = 'meal'

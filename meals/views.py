@@ -19,8 +19,9 @@ def get_meal_list(request):
     return render(request, 'meals/list.html', context)
 
 
-def get_meal_detail(request, slug):
-    meal_detail = Meals.objects.get(slug=slug)
+def get_meal_detail(request, m_id):
+    meal_detail = Meals.objects.get(id=m_id)
+    m_name = getattr(meal_detail,'name')
 
     context = {
         'meal_detail': meal_detail,
