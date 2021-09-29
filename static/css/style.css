@@ -23,6 +23,13 @@ html {
    width:100%;
    
  }
+
+ /* Testimonial */
+ .card {
+   border: 2px solid green;
+ }
+
+ 
  /*  Footer  */
  .footer {
   background: #061D25;
@@ -31,13 +38,11 @@ html {
 .footer a {
   color: #000;
   font-size: 40px;
-  padding: 20px;
-  border-right: 1px solid #70726F;
+  padding: 20px 40px;
+  
   transition: all .5s ease;
 }
-.footer a:first-child {
-  border-left: 1px solid #70726F;
-}
+
 .footer a:hover {
   color: white;
 }
