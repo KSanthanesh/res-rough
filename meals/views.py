@@ -37,6 +37,8 @@ def register(request):
         signup = UserCreationForm(request.POST)
         if signup.is_valid():
             signup.save()
-            messages.success(request, 'User has been successfully Registered.')
+            messages.success(request, 'User has been successfully Registered!, Please LogIn.')
+        else:
+            messages.error(request, 'Please Enter Valid Username and Password')
 
     return render(request, 'registration/register.html', {'form': form})

@@ -10,29 +10,56 @@ html {
     font-weight: 300;
     color: #000;
   }
-  /* navbar   */
+  /* -----------------------------------logo   */
+  .header {
+    display: flex;
+  }
+
+  .logo {
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+  /* -----------------------------------navbar   */
    ul, li, a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
   
   }
-  /* image */
+  /* --------------------------------home page image */
  .img {
    height: 70%;
    width:100%;
-   
  }
 
- /* Testimonial */
+ .head {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: max-content;
+  height: max-content;
+  background:#FFF;
+}
+
+ /* ----------------------------------Testimonial */
  .card {
-   border: 2px solid green;
+   border: 2px solid rgb(117, 214, 243);
+   padding: 10px;
  }
-
+ /* ----------------------------------contactin base.html */
+ .contact {
+   background-color: rgb(144, 147, 150);
+   margin-top: 20px;
+ }
  
- /*  Footer  */
+ /*  -----------------------------------Footer  */
  .footer {
-  background: #061D25;
+  background: #e0f0f5;
   padding: 10px 0;
 }
 .footer a {

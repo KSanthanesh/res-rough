@@ -2,17 +2,17 @@
 {% load static %}
 {% block content%}
 
-<h2>Login</h2>
+<h2 class="text-center">Login</h2>
 <br>
 {% if messages %}
     {% for message in messages %}
         <p>{{message}}</p>
     {% endfor %}
 {% endif %}
-<form method="post" action="">
+<form method="post" action="" class="text-center">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" />
+    <input type="submit" class="bg-info" />
 </form>
 
 {% endblock %}

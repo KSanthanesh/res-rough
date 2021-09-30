@@ -20,8 +20,9 @@
 </head>
 
 <body>
-  <div class="container-fluid bg-success text-dark">
-    <div>
+  <div class="container-fluid bg-info text-dark">
+    <div class="header">
+      <img src="{% static 'images/img-1.jpg' %}" class="logo" alt="logo">
     <h1>
     <a href="{% url 'home'%}">Dosa Palace</a></h1>
   </div>
@@ -39,16 +40,21 @@
         {% if user.is_authenticated %}
         <li><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
-        <li><a href="{% url 'login' %}" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-        <li><a href="{% url 'register' %}" target="_blank"><span class="glyphicon glyphicon-user"></span>register</a></li>
+        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+        <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span>register</a></li>
         {% endif %}
 
       </ul>
     </nav>
     </div>
-    <div class="row">
-      <img src="https://www.hotel7dublin.com/wp-content/uploads/Restaurant-Bar-5-1.jpg" class="img" alt="restaurant-image">
-  </div>
+    <div class="col-md-12" style="">
+			<img class="img-fluid  " src="https://www.hotel7dublin.com/wp-content/uploads/Restaurant-Bar-5-1.jpg" alt="Responsive image">	
+      
+      <h2 class="head text-center">Have you Tried before?<br>
+        <a href="#">Reserve a table</a></h2>
+    	</div>
+		
+	</div>
 	
 	<!-- Main Content -->
 	<div class="container-fluid">
@@ -58,9 +64,10 @@
 
 	</div>
   <div class="container">
-  <div class="row">
+  <div class="row contact">
     <div class="col">
       <h2 class="text-center">Contact</h2>
+      <p> <b>Opening Time Mon-Sun 5pm to 11pm.</b></p>
       <div class="col-md-4">
         <h5><strong>Address:</strong></h5>
         Dosa Palace,<br>
@@ -85,7 +92,7 @@
 	<hr>
 	
 	<!-- Footer -->
-	<footer class="footer bg-success">
+	<footer class="footer bg-info">
     <div class="container text-center">
       <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
       <a href="www.twitter.com"><i class="fa fa-twitter"></i></a>

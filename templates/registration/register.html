@@ -2,7 +2,9 @@
     {% load static %}
     {% block content%}
 
-    <h2>Register/SignUp</h2>
+
+    <div class="container">
+    <h2 class="text-center">Register/SignUp</h2>
     <br>
     {% if messages %}
         {% for message in messages %}
@@ -12,7 +14,8 @@
     <form method="post" action="">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" />
+        <input type="submit" class="bg-info" />
     </form>
+  </div>
     
     {% endblock %}

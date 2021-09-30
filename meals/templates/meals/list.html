@@ -3,12 +3,13 @@
 {% block content%}
 
 
-
+<div class="text-center">
 
 <h1>Meal List</h1>
 
 {% for meal in meal_list %}
-<h2><a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a></h2>
+<h2><a href="/meals/get_meal_detail/{{meal.id}}">{{ meal.name }}</a>:  {{ meal.price }}€</h2>
 {% endfor %}
+</div>
 
 {% endblock %}
