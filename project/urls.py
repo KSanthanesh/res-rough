@@ -17,13 +17,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+# from django.conf.urls import url, include
 
 
 urlpatterns = [
     path('', include('meals.urls'), name='meal-urls'),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')), 
-    path('meals/', include('meals.urls'), name='meal-urls'), 
+    path('meals/', include('meals.urls'), name='meal-urls'),
+    # path('accounts/', include('django.contrib.auth.urls')),
+    #url(r'^accounts/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
+    # path('reservation', include('reservation.urls'), name='reservation.urls')
 ]
 
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

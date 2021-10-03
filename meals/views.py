@@ -21,7 +21,7 @@ def get_meal_list(request):
 
 def get_meal_detail(request, m_id):
     meal_detail = Meals.objects.get(id=m_id)
-    m_name = getattr(meal_detail,'name')
+    # m_name = getattr(meal_detail,'name')
 
     context = {
         'meal_detail': meal_detail,

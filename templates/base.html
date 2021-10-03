@@ -39,9 +39,9 @@
       <ul class="nav navbar-nav navbar-right navbar-expand-lg">
         {% if user.is_authenticated %}
         <li><a href="{% url 'logout' %}">Logout</a></li>
-        {% else %}
-        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-        <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span>register</a></li>
+        
+        
+       
         {% endif %}
 
       </ul>
