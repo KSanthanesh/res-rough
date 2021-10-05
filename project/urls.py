@@ -25,9 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('meals/', include('meals.urls'), name='meal-urls'),
     # path('accounts/', include('django.contrib.auth.urls')),
-    #url(r'^accounts/', include('allauth.urls')),
+    # url(r'^accounts/', include('allauth.urls')),
     path('accounts/', include('allauth.urls')),
-    # path('reservation', include('reservation.urls'), name='reservation.urls')
+    path('employee/', include('employee.urls'), name='employee-urls'),
 ]
 
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
