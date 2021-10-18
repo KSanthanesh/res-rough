@@ -1,0 +1,49 @@
+{% extends "base_user.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-fluid">
+<div class="text-center">
+<h2 class="contact-us">Table Count View</h2>
+
+<div class="row">
+<table class="table table-bordered bg-info table-hover meal-table">
+
+    <thead class="bg-dark text-white">
+        <tr>
+            <!-- <th class="text-center">Username</th> -->
+            <th class="col-8 small text-center">Tables available</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for meal in table_count %}
+        {% if user.is_authenticated %}
+            
+        
+
+        <tr class="col-8 small">
+            
+            <td class="col-8 small">
+                {{meal.total_tables}}
+            </td>
+          
+           
+        </tr>
+    
+    {% endif %}
+    
+        {% endfor %}
+        
+    </tbody>   
+</table>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+{% endblock %}
